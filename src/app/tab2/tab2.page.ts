@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Platform} from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private platform: Platform) {}
+
+  ionViewDidEnter() {
+    console.log(this.platform.platforms());
+    (window as any).gtag('event', 'my_custom_event', {
+      platform: this.platform.platforms()
+    })
+  }
 
 }
