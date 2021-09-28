@@ -1,0 +1,7 @@
+{
+  "name": "test-google-analytics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
